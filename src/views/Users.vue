@@ -27,8 +27,7 @@ const formatData = (data) => {
 const requestUsersData = async () => {
     try {
         const response = await userService.getUsers();
-        users.value = formatData(response?.results)
-        console.log('users', users.value)
+        users.value = formatData(response?.results);
     } catch (err) {
         console.log('error', err)
     }
